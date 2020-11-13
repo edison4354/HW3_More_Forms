@@ -53,6 +53,9 @@ def compliments_results():
     """Show the user some compliments."""
     context = {
         # TODO: Enter your context variables here.
+        'users_name': request.args.get('users_name'),
+        'compliments_checkbox':  request.args.get('wants_compliments'),
+        'num_compliments': request.args.get('num_compliments')
     }
 
     return render_template('compliments_results.html', **context)
